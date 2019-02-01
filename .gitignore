@@ -164,3 +164,4 @@ web_app/build/*
 *.crt
 *.key
 .vscode
+dist/
