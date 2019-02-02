@@ -12,6 +12,8 @@ import "../sass/loading-screen.scss";
 import "../javascript/google-analytics-template";
 import "../javascript/google-tag-manager-template";
 import "../../node_modules/bootstrap/scss/bootstrap.scss";
+import "../sass/main.scss";
+import "../javascript/google-analytics";
 
 // December 2018:  We want to work toward being airbnb style compliant, but for now these are disabled in this file to minimize massive changes
 /* eslint global-require: 1 */
