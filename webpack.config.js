@@ -12,6 +12,12 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+      favicon: "src/img/global/icons/favicon.ico",
+    }),
+  ],
   module: {
     rules: [
       {
@@ -25,4 +31,3 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
 };
-
