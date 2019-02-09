@@ -1,24 +1,25 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
-const port = process.env.PORT || 3000; 
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
+
+const port = process.env.PORT || 3000;
 
 module.exports = {
-  mode: "development", 
+  mode: "development",
   devtool: "inline-source-map",
-  entry: "./src/js/index.js", 
+  entry: "./src/js/index.js",
   output: {
-      path: path.resolve(__dirname, 'build'), 
-      filename: 'bundle.js'
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js",
   },
   module: {
     rules: [
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
-      }
-    ]
-  }
-}
+        use: ["babel-loader"],
+      },
+    ],
+  },
+};
 
