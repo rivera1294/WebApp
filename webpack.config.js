@@ -12,6 +12,9 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
+  devServer: {
+    port,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html",
@@ -25,9 +28,25 @@ module.exports = {
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.svg$/,
+        use: ["svg-inline-loader"],
+      },
+      {
+        test: /\.(eot|woff|ttf)$/,
+        use: ["file-loader"],
+      },
     ],
   },
   resolve: {
+    modules: [
+      path.resolve(__dirname, "src"),
+      "node_modules",
+    ],
     extensions: [".js", ".jsx"],
   },
 };
