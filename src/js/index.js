@@ -9,6 +9,7 @@ import { isCordova } from "./utils/cordovaUtils";
 import routes from "./Root";
 import theme from "./mui-theme";
 import "../sass/main.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // December 2018:  We want to work toward being airbnb style compliant, but for now these are disabled in this file to minimize massive changes
 /* eslint global-require: 1 */
