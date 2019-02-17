@@ -33,12 +33,15 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.svg$/,
-        use: ["svg-inline-loader"],
-      },
-      {
-        test: /\.(eot|woff|ttf)$/,
-        use: ["file-loader"],
+        test: /\.(eot|woff|ttf|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+            },
+          },
+        ],
       },
     ],
   },
