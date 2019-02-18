@@ -12,6 +12,10 @@ import { renderLog } from "../../utils/logging";
 import OrganizationActions from "../../actions/OrganizationActions";
 import VoterGuideActions from "../../actions/VoterGuideActions";
 import VoterSessionActions from "../../actions/VoterSessionActions";
+import ballotIcon24 from "../../../img/global/svg-icons/nav/ballot-icon-24.svg";
+import networkIcon24 from "../../../img/global/svg-icons/nav/network-icon-24.svg";
+import donateIcon24 from "../../../img/global/svg-icons/nav/donate-icon-24.svg";
+import avatarGeneric from "../../../img/global/svg-icons/avatar-generic.svg";
 
 export default class HeaderBar extends Component {
   static propTypes = {
@@ -24,7 +28,7 @@ export default class HeaderBar extends Component {
     return (
       <Link to="/ballot" className={`header-nav__item${active ? " active-icon" : ""}`}>
         <img className="header-nav__icon--ballot"
-             src={cordovaDot("/img/global/svg-icons/nav/ballot-icon-24.svg")}
+             src={cordovaDot(ballotIcon24)}
              color="#ffffff"
              alt="Ballot"
         />
@@ -40,7 +44,7 @@ export default class HeaderBar extends Component {
       <Link to="/more/network" className={`header-nav__item${active ? " active-icon" : ""}`}>
         <div title="Network">
           <img className="header-nav__icon"
-               src={cordovaDot("/img/global/svg-icons/nav/network-icon-24.svg")}
+               src={cordovaDot(networkIcon24)}
                color="#ffffff"
                alt="Network"
           />
@@ -61,7 +65,7 @@ export default class HeaderBar extends Component {
     return (
       <Link to="/more/donate" className={`header-nav__item--donate header-nav__item d-none d-sm-block${active ? " active-icon" : ""}`}>
         <img className="header-nav__icon"
-             src={cordovaDot("/img/global/svg-icons/nav/donate-icon-24.svg")}
+             src={cordovaDot(donateIcon24)}
              color="#ffffff"
              alt="Donate"
         />
@@ -271,7 +275,7 @@ export default class HeaderBar extends Component {
             </div>
           ) : (
             <div id="anonIcon" className="header-nav__avatar">
-              <img src={cordovaDot("/img/global/svg-icons/avatar-generic.svg")} width="34" height="34" color="#c0c0c0" alt="generic voter" />
+              <img src={cordovaDot(avatarGeneric)} width="34" height="34" color="#c0c0c0" alt="generic voter" />
             </div>
           )
           }

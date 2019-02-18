@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { cordovaDot } from "../utils/cordovaUtils";
 import { renderLog } from "../utils/logging";
+import avatarGeneric from "../../img/global/svg-icons/avatar-generic.svg";
+import issueGeneric from "../../img/global/svg-icons/issue-generic.svg";
+import issuePhotoGeneric from "../../img/global/svg-icons/issue-photo-generic.svg";
+import organizationIcon from "../../img/global/svg-icons/organization-icon.svg";
 
 export default class ImageHandler extends Component {
   static propTypes = {
@@ -39,22 +43,22 @@ export default class ImageHandler extends Component {
     switch (kindOfImage) {
       case "CANDIDATE":
         replacementClass = "icon-main image-person-placeholder";
-        imagePlaceholderIcon = <img src={cordovaDot("/img/global/svg-icons/avatar-generic.svg")} width="34" height="34" color="#c0c0c0" alt="generic voter" />;
+        imagePlaceholderIcon = <img src={cordovaDot(avatarGeneric)} width="34" height="34" color="#c0c0c0" alt="generic voter" />;
         break;
       case "MEASURE" || "OFFICE":
         // TODO: Refactor to remove font icons
         return <i className="search-image__filler" />;
       case "ISSUE":
         replacementClass = "icon-main image-person-placeholder";
-        placeHolderImageUrl = cordovaDot("/img/global/svg-icons/issue-generic.svg");
+        placeHolderImageUrl = cordovaDot(issueGeneric);
         break;
       case "ISSUE-PHOTO":
         replacementClass = "image-issue-photo-placeholder";
-        placeHolderImageUrl = cordovaDot("/img/global/svg-icons/issue-photo-generic.svg");
+        placeHolderImageUrl = cordovaDot(issuePhotoGeneric);
         break;
       default:
         replacementClass = "icon-main image-organization-placeholder";
-        placeHolderImageUrl = cordovaDot("/img/global/svg-icons/organization-icon.svg");
+        placeHolderImageUrl = cordovaDot(organizationIcon);
         break;
     }
 

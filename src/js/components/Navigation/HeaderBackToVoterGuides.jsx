@@ -13,6 +13,7 @@ import { renderLog } from "../../utils/logging";
 import { shortenText, stringContains } from "../../utils/textFormat";
 import VoterGuideActions from "../../actions/VoterGuideActions";
 import VoterSessionActions from "../../actions/VoterSessionActions";
+import avatarGeneric from "../../../img/global/svg-icons/avatar-generic.svg";
 
 export default class HeaderBackToVoterGuides extends Component {
   static propTypes = {
@@ -288,7 +289,7 @@ export default class HeaderBackToVoterGuides extends Component {
             </div>
           ) : (
             <div id="anonIcon" className="header-nav__avatar">
-              <img src={cordovaDot("/img/global/svg-icons/avatar-generic.svg")} width="34" height="34" color="#c0c0c0" alt="generic voter" />
+              <img src={cordovaDot(avatarGeneric)} width="34" height="34" color="#c0c0c0" alt="generic voter" />
             </div>
           )}
         </div>

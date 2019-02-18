@@ -23,6 +23,11 @@ import SupportStore from "../../stores/SupportStore";
 import VoterActions from "../../actions/VoterActions";
 import VoterStore from "../../stores/VoterStore";
 import VoterGuideStore from "../../stores/VoterGuideStore";
+import thumbsUpColor from "../../../img/global/icons/thumbs-up-color-icon.svg";
+import thumbsDownColor from "../../../img/global/icons/thumbs-down-color-icon.svg";
+import triangleBottom from "../../../img/global/svg-icons/glyphicons-pro-halflings/glyphicons-halflings-252-triangle-bottom.svg";
+import triangleRight from "../../../img/global/svg-icons/glyphicons-pro-halflings/glyphicons-halflings-250-triangle-right.svg";
+import upArrowColor from "../../../img/global/icons/up-arrow-color-icon.svg";
 
 // December 2018:  We want to work toward being airbnb style compliant, but for now these are disabled in this file to minimize massive changes
 /* eslint no-param-reassign: 0 */
@@ -352,7 +357,7 @@ export default class OfficeItemCompressedRaccoon extends Component {
         const organizationNameIssueSupportListDisplay =
           organizationNameIssueSupportList.map(organizationName => (
             <span key={organizationName} className="u-flex u-flex-row u-justify-start u-items-start">
-              <img src={cordovaDot("/img/global/icons/thumbs-up-color-icon.svg")} width="20" height="20" />
+              <img src={cordovaDot(thumbsUpColor)} width="20" height="20" />
               <span>&nbsp;</span>
               <span>
                 {organizationName}
@@ -365,7 +370,7 @@ export default class OfficeItemCompressedRaccoon extends Component {
         const organizationNameIssueOpposeListDisplay =
           organizationNameIssueOpposeList.map(organizationName => (
             <span key={organizationName} className="u-flex u-flex-row u-justify-start u-items-start">
-              <img src={cordovaDot("/img/global/icons/thumbs-down-color-icon.svg")} width="20" height="20" />
+              <img src={cordovaDot(thumbsDownColor)} width="20" height="20" />
               <span>&nbsp;</span>
               <span>
                 {organizationName}
@@ -388,7 +393,7 @@ export default class OfficeItemCompressedRaccoon extends Component {
         const nameNetworkSupportListDisplay =
           nameNetworkSupportList.map(speakerDisplayName => (
             <span key={speakerDisplayName} className="u-flex u-flex-row u-justify-start u-items-start">
-              <img src={cordovaDot("/img/global/icons/thumbs-up-color-icon.svg")} width="20" height="20" alt="thumbs up" />
+              <img src={cordovaDot(thumbsUpColor)} width="20" height="20" alt="thumbs up" />
               <span>&nbsp;</span>
               <span>
                 {speakerDisplayName}
@@ -401,7 +406,7 @@ export default class OfficeItemCompressedRaccoon extends Component {
         const nameNetworkOpposeListDisplay =
           nameNetworkOpposeList.map(speakerDisplayName => (
             <span key={speakerDisplayName} className="u-flex u-flex-row u-justify-start u-items-start">
-              <img src={cordovaDot("/img/global/icons/thumbs-down-color-icon.svg")} width="20" height="20" alt="thumbs down" />
+              <img src={cordovaDot(thumbsDownColor)} width="20" height="20" alt="thumbs down" />
               <span>&nbsp;</span>
               <span>
                 {speakerDisplayName}
@@ -470,11 +475,11 @@ export default class OfficeItemCompressedRaccoon extends Component {
             <span className="u-cursor--pointer" onClick={this.toggleExpandDetails}>
               { this.state.displayOfficeUnfurled ? (
                 <span className="d-print-none u-push--xs">
-                  <img src={cordovaDot("/img/global/svg-icons/glyphicons-pro-halflings/glyphicons-halflings-252-triangle-bottom.svg")} width="32" height="32" alt="furl" />
+                  <img src={cordovaDot(triangleBottom)} width="32" height="32" alt="furl" />
                 </span>
               ) : (
                 <span className="d-print-none u-push--xs">
-                  <img src={cordovaDot("/img/global/svg-icons/glyphicons-pro-halflings/glyphicons-halflings-250-triangle-right.svg")} width="32" height="32" alt="unfurl" />
+                  <img src={cordovaDot(triangleRight)} width="32" height="32" alt="unfurl" />
                 </span>
               )}
               <span className="card-main__ballot-name-link">{ballotItemDisplayName}</span>
@@ -652,7 +657,7 @@ export default class OfficeItemCompressedRaccoon extends Component {
                         {" "}
                         <span className="u-no-break">
                           {" "}
-                          <img src={cordovaDot("/img/global/icons/thumbs-up-color-icon.svg")} width="20" height="20" />
+                          <img src={cordovaDot(thumbsUpColor)} width="20" height="20" />
                           {" "}
                           supports
                         </span>
@@ -711,7 +716,7 @@ export default class OfficeItemCompressedRaccoon extends Component {
                         >
                           <div>
                             <span className="u-push--xs u-cursor--pointer">Your network supports</span>
-                            <img src={cordovaDot("/img/global/icons/up-arrow-color-icon.svg")} className="network-positions__support-icon" width="20" height="20" />
+                            <img src={cordovaDot(upArrowColor)} className="network-positions__support-icon" width="20" height="20" />
                           </div>
                         </OverlayTrigger>
                       </div>
@@ -779,7 +784,7 @@ export default class OfficeItemCompressedRaccoon extends Component {
                                     <strong>Issue Score</strong>
                                   </span>
                                   <img
-                                    src={cordovaDot("/img/global/icons/up-arrow-color-icon.svg")}
+                                    src={cordovaDot(upArrowColor)}
                                     className="network-positions__support-icon"
                                     width="20"
                                     height="20"
@@ -857,7 +862,7 @@ export default class OfficeItemCompressedRaccoon extends Component {
                         </div>
                         <div className="u-flex-none u-justify-end">
                           <span className="u-push--xs">Chosen by you</span>
-                          <img src={cordovaDot("/img/global/svg-icons/thumbs-up-color-icon.svg")}
+                          <img src={cordovaDot(thumbsUpColor)}
                             width="24"
                             height="24"
                           />

@@ -17,6 +17,9 @@ import { renderLog } from "../../utils/logging";
 import VoterActions from "../../actions/VoterActions";
 import VoterStore from "../../stores/VoterStore";
 import webAppConfig from "../../config";
+import issues16 from "../../../img/global/svg-icons/nav/issues-16.svg";
+import print16 from "../../../img/global/svg-icons/nav/print-16.svg";
+import email16 from "../../../img/global/svg-icons/nav/email-16.svg";
 
 export default class HeaderSecondaryNavBar extends Component {
   static propTypes = {
@@ -297,20 +300,20 @@ export default class HeaderSecondaryNavBar extends Component {
                 {/* completed={this.state.ballot_intro_issues_completed} No longer using completed state */}
                 <SecondaryNavBarItem
                   show={this._toggleBallotIntroFollowIssues}
-                  source={cordovaDot("/img/global/svg-icons/nav/issues-16.svg")}
+                  source={cordovaDot(issues16)}
                   title="Issues"
                 />
 
                 <SecondaryNavBarItem
                   show={this._openPrintModal}
-                  source={cordovaDot("/img/global/svg-icons/nav/print-16.svg")}
+                  source={cordovaDot(print16)}
                   title="Print"
                   iconPrint
                 />
 
                 <SecondaryNavBarItem
                   show={this._toggleEmailModal}
-                  source={cordovaDot("/img/global/svg-icons/nav/email-16.svg")}
+                  source={cordovaDot(email16)}
                   title="Email Ballot"
                 />
 

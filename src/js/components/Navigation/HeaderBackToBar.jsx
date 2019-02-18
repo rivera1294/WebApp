@@ -11,6 +11,7 @@ import { renderLog } from "../../utils/logging";
 import VoterGuideActions from "../../actions/VoterGuideActions";
 import VoterSessionActions from "../../actions/VoterSessionActions";
 import { shortenText } from "../../utils/textFormat";
+import avatarGeneric from "../../../img/global/svg-icons/avatar-generic.svg";
 
 export default class HeaderBackToBar extends Component {
   static propTypes = {
@@ -310,7 +311,7 @@ export default class HeaderBackToBar extends Component {
             </div>
           ) : (
             <div id="anonIcon" className="header-nav__avatar">
-              <img src={cordovaDot("/img/global/svg-icons/avatar-generic.svg")} width="34" height="34" color="#c0c0c0" alt="generic voter" />
+              <img src={cordovaDot(avatarGeneric)} width="34" height="34" color="#c0c0c0" alt="generic voter" />
             </div>
           )}
         </div>
