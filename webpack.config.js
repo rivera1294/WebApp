@@ -10,7 +10,7 @@ module.exports = {
   entry: "./src/js/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
+    filename: "bundle.[hash].js",
   },
   devServer: {
     port,
